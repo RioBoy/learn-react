@@ -1,0 +1,55 @@
+/* Style Navbar */
+.nav {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 150px;
+}
+
+.App-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.nav-item {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+}
+
+.nav-item a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #398ab9;
+  line-height: 50px;
+  padding: 0 15px;
+  font-weight: 400;
+}
+
+.nav-item a.active {
+  background-color: #398ab9;
+  color: white;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.nav-item a.active:hover {
+  background-color: #21325e;
+}
+
+.nav-item a:hover {
+  color: white;
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: lightblue;
+  transition: all 0.5s;
+  border-radius: 6px;
+}

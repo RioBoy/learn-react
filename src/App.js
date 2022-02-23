@@ -1,25 +1,17 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import logo from './logo.svg';
-import './App.css';
+import pic from './pic.jpg';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import './style.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar logo={logo} />
+      <Hero pic={pic} />
     </div>
   );
-}
+};
 
 export default App;
