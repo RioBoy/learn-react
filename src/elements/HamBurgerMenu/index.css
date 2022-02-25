@@ -1,0 +1,16 @@
+/* Humburger Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu .line {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 6px;
+  background-color: black;
+}

@@ -1,8 +1,12 @@
 /* Style Navbar */
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  justify-content: space-between;
+}
+
+.nav.close {
+  grid-template-columns: 1fr 28px 2fr;
 }
 
 .border-bottom {
@@ -16,22 +20,25 @@
 }
 
 .nav-item {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  justify-content: end;
+  gap: 15px;
   list-style: none;
 }
 
 .nav-link {
-  display: flex;
+  display: grid;
+  justify-content: stretch;
 }
 
 .nav-item a {
-  margin-left: 20px;
   text-decoration: none;
   color: #398ab9;
   line-height: 50px;
   padding: 0 15px;
   font-weight: 400;
+  text-align: center;
 }
 
 .nav-item a.active {
@@ -47,17 +54,34 @@
 
 .nav-item a:hover {
   color: white;
-  display: block;
-  height: 50px;
-  width: 100%;
   background-color: lightblue;
   transition: all 0.5s;
   border-radius: 6px;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.mobile-view {
+  display: none;
+}
+
 /* Responsive */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1024px) {
+  .nav {
+    grid-template-columns: 1fr 28px !important;
+  }
+
   .nav .nav-item {
     display: none;
+  }
+
+  .mobile-view {
+    display: block;
   }
 }
