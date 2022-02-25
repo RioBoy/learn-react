@@ -1,13 +1,13 @@
 /* Style Navbar */
 .nav {
-  border-bottom: 1px solid #d1d1d1;
-}
-
-.container-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto 150px;
+}
+
+.border-bottom {
+  border-bottom: 0 solid #d1d1d1;
+  margin: 0;
 }
 
 .App-logo {
@@ -17,6 +17,7 @@
 
 .nav-item {
   display: flex;
+  justify-content: flex-end;
   list-style: none;
 }
 
@@ -52,4 +53,11 @@
   background-color: lightblue;
   transition: all 0.5s;
   border-radius: 6px;
+}
+
+/* Responsive */
+@media screen and (max-width: 425px) {
+  .nav .nav-item {
+    display: none;
+  }
 }

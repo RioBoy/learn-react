@@ -24,28 +24,31 @@ const Navbar = (props) => {
     },
   ];
   return (
-    <nav className="nav">
-      <div className="container-nav">
-        <a href="#" className="navbar-brand">
-          <img src={props.logo} className="App-logo" alt="logo" />
-        </a>
-        <ul className="nav-item">
-          {links.map((link, i) => {
-            return link.name === 'Sign Up' ? (
-              <li className="nav-link" key={i}>
-                <a className="active" href={link.to}>
-                  {link.name}
-                </a>
-              </li>
-            ) : (
-              <li className="nav-link" key={i}>
-                <a href={link.to}>{link.name}</a>
-              </li>
-            );
-          })}
-        </ul>
+    <div className="container-fluid">
+      <div className="container">
+        <nav className="nav">
+          <a href="#" className="navbar-brand">
+            <img src={props.logo} className="App-logo" alt="logo" />
+          </a>
+          <ul className="nav-item">
+            {links.map((link, i) => {
+              return link.name === 'Sign Up' ? (
+                <li className="nav-link" key={i}>
+                  <a className="active" href={link.to}>
+                    {link.name}
+                  </a>
+                </li>
+              ) : (
+                <li className="nav-link" key={i}>
+                  <a href={link.to}>{link.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
-    </nav>
+      <hr className="border-bottom"></hr>
+    </div>
   );
 };
 

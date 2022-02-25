@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import pic from './pic.jpg';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import './style.css';
+import './App.css';
 
 const App = () => {
   return (

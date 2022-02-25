@@ -1,14 +1,8 @@
 /* Style Hero */
-.container {
-  margin: auto 150px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .hero {
-  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
   gap: 50px;
   align-items: center;
 }
@@ -32,4 +26,15 @@
 
 .profile span {
   color: #398ab9;
+}
+
+/* Responsive */
+@media screen and (max-width: 425px) {
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .picture {
+    order: -1;
+  }
 }

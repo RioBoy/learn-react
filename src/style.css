@@ -1,8 +1,0 @@
-@import url('./components/Navbar/index.css');
-@import url('./components/Hero/index.css');
-@import url('./elements/Button/index.css');
-
-body {
-  margin: 0;
-  padding: 0;
-}
