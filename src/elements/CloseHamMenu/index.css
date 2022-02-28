@@ -1,0 +1,30 @@
+/* Close Humburger Menu */
+.close-menu {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.close-menu .line {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 6px;
+  background-color: black;
+}
+
+.close-menu .line.one {
+  top: 50%;
+  transform: translateY(9px) rotate(45deg);
+}
+
+.close-menu .line.two {
+  opacity: 0;
+}
+
+.close-menu .line.three {
+  bottom: 50%;
+  transform: translateY(-8px) rotate(-45deg);
+}

@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import HamburgerMenu from '../../elements/HamBurgerMenu';
+import CloseHamMenu from '../../elements/CloseHamMenu';
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -55,8 +56,34 @@ export default class Navbar extends Component {
             <HamburgerMenu onClick={this.toggleNav} />
 
             <div className={close ? 'hidden' : 'show'}>
-              <div className="mobile-view">
-                <p>Hello Bang</p>
+              <div className="mobile-nav">
+                <div className="mobile-fixed">
+                  <a href="#" className="navbar-brand">
+                    <img
+                      src={this.props.logo}
+                      className="App-logo"
+                      alt="logo"
+                    />
+                  </a>
+
+                  <CloseHamMenu onClick={this.toggleNav} />
+                </div>
+
+                <ul className="mobile-nav-item">
+                  {links.map((link, i) => {
+                    return link.name === 'Sign Up' ? (
+                      <li className="mobile-nav-link" key={i}>
+                        <a className="active" href={link.to}>
+                          {link.name}
+                        </a>
+                      </li>
+                    ) : (
+                      <li className="mobile-nav-link" key={i}>
+                        <a href={link.to}>{link.name}</a>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
 
