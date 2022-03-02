@@ -1,8 +1,17 @@
+/* Font Style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @import url('./components/Navbar/index.css');
 @import url('./components/Hero/index.css');
+@import url('./components/Feature/index.css');
 @import url('./elements/Button/index.css');
 @import url('./elements//HamBurgerMenu/index.css');
 @import url('./elements//CloseHamMenu/index.css');
+@import url('./elements/Card/index.css');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 .container {
   margin: 0 150px;

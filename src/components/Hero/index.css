@@ -11,6 +11,8 @@
   width: 100%;
   height: 420px;
   border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profile h3 {
@@ -29,7 +31,7 @@
 }
 
 /* Responsive */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .hero {
     grid-template-columns: repeat(1, 1fr);
   }

@@ -1,0 +1,42 @@
+/* Style Feature */
+.features {
+  margin-top: 70px;
+  background-color: #f5f6f8;
+}
+
+.features .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.features .title h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.features .title h3 span {
+  font-weight: 400;
+}
+
+.features-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .features-content {
+    grid-template-columns: 1fr;
+    padding: 0 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .features-content {
+    padding: 0;
+  }
+}
