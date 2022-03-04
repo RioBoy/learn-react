@@ -49,7 +49,7 @@ export default class Navbar extends Component {
       <div className="container-fluid">
         <div className="container">
           <nav className={'nav ' + (!close ? 'close' : '')}>
-            <a href="#" className="navbar-brand">
+            <a href="" className="navbar-brand">
               <img src={this.props.logoNav} className="App-logo" alt="logo" />
             </a>
 
@@ -58,7 +58,7 @@ export default class Navbar extends Component {
             <div className={close ? 'hidden' : 'show'}>
               <div className="mobile-nav">
                 <div className="mobile-fixed">
-                  <a href="#" className="navbar-brand">
+                  <a href="" className="navbar-brand">
                     <img
                       src={this.props.logoNav}
                       className="App-logo"

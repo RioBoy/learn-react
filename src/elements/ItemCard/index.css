@@ -2,7 +2,7 @@
 .item-content {
   margin-top: 70px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 30px;
 }
 
@@ -83,6 +83,10 @@
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
+  .item-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
   .card-price span {
     padding: 5px 10px;
     font-size: 14px;
