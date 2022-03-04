@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Button from '../../elements/Button';
 
-const Hero = (props) => {
+const Hero = ({ heroPic }) => {
   const name = 'Rio Boy';
   const lorem = `Lorem Ipsum is simply dummy text of the printing and typesetting
   industry. Lorem Ipsum has been the industry's standard dummy text
@@ -18,7 +18,7 @@ const Hero = (props) => {
           <Button />
         </div>
         <div className="picture">
-          <img src={props.pic} className="App-profile-picture" alt="logo" />
+          <img src={heroPic} className="App-profile-picture" alt="hero" />
         </div>
       </div>
     </div>

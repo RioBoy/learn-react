@@ -50,7 +50,7 @@ export default class Navbar extends Component {
         <div className="container">
           <nav className={'nav ' + (!close ? 'close' : '')}>
             <a href="#" className="navbar-brand">
-              <img src={this.props.logo} className="App-logo" alt="logo" />
+              <img src={this.props.logoNav} className="App-logo" alt="logo" />
             </a>
 
             <HamburgerMenu onClick={this.toggleNav} />
@@ -60,7 +60,7 @@ export default class Navbar extends Component {
                 <div className="mobile-fixed">
                   <a href="#" className="navbar-brand">
                     <img
-                      src={this.props.logo}
+                      src={this.props.logoNav}
                       className="App-logo"
                       alt="logo"
                     />
