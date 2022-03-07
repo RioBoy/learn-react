@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Feature from './components/Feature';
 import Item from './components/Item';
+import Footer from './components/Footer';
 import './App.css';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Hero heroPic={pic} />
       <Feature />
       <Item itemPic={pic} />
+      <Footer footerLogo={logo} />
     </div>
   );
 };

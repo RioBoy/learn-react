@@ -9,13 +9,7 @@
 .card-item {
   border-radius: 15px;
   cursor: pointer;
-  transition: box-shadow 0.5s ease-in-out;
-}
-
-.card-item:hover {
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  border: none;
-  background-color: #fff;
+  box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.1);
 }
 
 .card-item-header {
@@ -28,7 +22,6 @@
   border-radius: 15px;
   background-position: center;
   object-fit: cover;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card-item-header .card-price {
@@ -91,6 +84,11 @@
     padding: 5px 10px;
     font-size: 14px;
   }
+
+  .card-item-footer img {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -107,11 +105,21 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card-item-footer img {
+    height: 80px;
+    width: 80px;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .card-item {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .card-item-footer img {
+    height: 50px;
+    width: 50px;
   }
 }
