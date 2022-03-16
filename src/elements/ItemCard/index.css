@@ -18,7 +18,7 @@
 
 .card-item-header img {
   width: 100%;
-  height: auto;
+  height: 250px;
   border-radius: 15px;
   background-position: center;
   object-fit: cover;
@@ -56,6 +56,7 @@
 
 .card-item-body p {
   font-weight: 300;
+  font-size: 14px;
 }
 
 .card-item-footer {
@@ -78,6 +79,9 @@
 @media screen and (max-width: 1024px) {
   .item-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .card-item-header img {
+    height: 200px;
   }
 
   .card-price span {
@@ -116,6 +120,10 @@
   .card-item {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .card-item-header img {
+    height: 250px;
   }
 
   .card-item-footer img {

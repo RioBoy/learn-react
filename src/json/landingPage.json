@@ -1,0 +1,84 @@
+{
+  "features": [
+    {
+      "icon": "fa-amazon",
+      "iconType": "fab",
+      "title": "Feature 1",
+      "subTitle": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+      "icon": "fa-aws",
+      "iconType": "fab",
+      "title": "Feature 2",
+      "subTitle": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+      "icon": "fa-amazon-pay",
+      "iconType": "fab",
+      "title": "Feature 3",
+      "subTitle": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    }
+  ],
+  "items": [
+    {
+      "_id": "1",
+      "name": "Pink Beach",
+      "district": "West Manggarai",
+      "province": "East Nusa Tenggara",
+      "imageUrl": "/images/item-1.jpg",
+      "price": "500000",
+      "avatar": "/images/item-avatar-1.jpg",
+      "userName": "Rio Boy"
+    },
+    {
+      "_id": "2",
+      "name": "Kelimutu Lake",
+      "district": "Ende",
+      "province": "East Nusa Tenggara",
+      "imageUrl": "/images/item-2.jpg",
+      "price": "700000",
+      "avatar": "/images/item-avatar-2.jpg",
+      "userName": "Walter Aluman"
+    },
+    {
+      "_id": "3",
+      "name": "Padar Island",
+      "district": "West Manggarai",
+      "province": "East Nusa Tenggara",
+      "imageUrl": "/images/item-3.jpg",
+      "price": "900000",
+      "avatar": "/images/item-avatar-1.jpg",
+      "userName": "Risal Naitio"
+    },
+    {
+      "_id": "4",
+      "name": "Oetune Beach",
+      "district": "South Central Timor",
+      "province": "East Nusa Tenggara",
+      "imageUrl": "/images/item-4.jpg",
+      "price": "300000",
+      "avatar": "/images/item-avatar-2.jpg",
+      "userName": "Sandro Binsasi"
+    },
+    {
+      "_id": "5",
+      "name": "Wairinding Hill",
+      "district": "East Sumba",
+      "province": "East Nusa Tenggara",
+      "imageUrl": "/images/item-5.jpg",
+      "price": "800000",
+      "avatar": "/images/item-avatar-1.jpg",
+      "userName": "Engel Laklo"
+    },
+    {
+      "_id": "6",
+      "name": "Wae Rebo Village",
+      "district": "Manggarai",
+      "province": "East Nusa Tenggara",
+      "imageUrl": "/images/item-6.jpg",
+      "price": "600000",
+      "avatar": "/images/item-avatar-2.jpg",
+      "userName": "Martin Tallo"
+    }
+  ]
+}

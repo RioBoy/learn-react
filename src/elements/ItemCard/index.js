@@ -1,24 +1,33 @@
 import React from 'react';
 
-export default function ItemCard({ ItemCardPic, items }) {
+import NumberFormat from 'react-number-format';
+
+export default function ItemCard({ itemData }) {
   return (
     <div className="item-content">
-      {items.map((item, i) => (
-        <div className="card-item" key={i}>
+      {itemData.items.map((item) => (
+        <div className="card-item" key={item._id}>
           <div className="card-item-header">
             <div className="card-price">
-              <span>{item.price}</span>
+              <NumberFormat
+                value={item.price}
+                displayType={'text'}
+                thousandSeparator={true}
+                prefix={'IDR '}
+              />
             </div>
-            <img src={ItemCardPic} alt="item" />
+            <img src={item.imageUrl} alt="item" />
           </div>
           <div className="card-mobile-view">
             <div className="card-item-body">
-              <h3 className="item-title">{item.title}</h3>
-              <p>{item.location}</p>
+              <h3 className="item-title">{item.name}</h3>
+              <p>
+                {item.district}, {item.province}
+              </p>
             </div>
             <div className="card-item-footer">
-              <img src={ItemCardPic} alt="user" />
-              <h5>{item.name}</h5>
+              <img src={item.avatar} alt="user" />
+              <h5>{item.userName}</h5>
             </div>
           </div>
         </div>

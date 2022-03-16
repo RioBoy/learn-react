@@ -14,7 +14,7 @@ const App = () => {
       <Navbar logoNav={logo} />
       <Hero heroPic={pic} />
       <Feature />
-      <Item itemPic={pic} />
+      <Item />
       <Footer footerLogo={logo} />
     </div>
   );

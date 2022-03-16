@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Button from '../../elements/Button';
 
 const Hero = ({ heroPic }) => {
@@ -7,12 +6,14 @@ const Hero = ({ heroPic }) => {
   industry. Lorem Ipsum has been the industry's standard dummy text
   ever since the 1500s, when an unknown printer took a galley of type
   and scrambled it to make a type specimen book`;
+
   return (
     <div className="container">
       <div className="hero">
         <div className="profile">
           <h3>
-            Hi there, Welcome <br></br>My Name <span>{name}</span>
+            Hi there, Welcome <br />
+            My Name <span>{name}</span>
           </h3>
           <p>{lorem}</p>
           <Button />

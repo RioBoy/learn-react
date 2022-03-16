@@ -1,23 +1,9 @@
 import React from 'react';
 
 import Card from '../../elements/Card';
+import data from '../../json/landingPage.json';
 
 export default function Feature() {
-  const icons = [
-    {
-      type: 'fab',
-      name: 'fa-amazon',
-    },
-    {
-      type: 'fab',
-      name: 'fa-aws',
-    },
-    {
-      type: 'fab',
-      name: 'fa-amazon-pay',
-    },
-  ];
-
   return (
     <section className="features">
       <div className="container">
@@ -31,8 +17,14 @@ export default function Feature() {
           </h3>
         </div>
         <div className="features-content">
-          {icons.map((icon, i) => (
-            <Card type={icon.type} name={icon.name} key={i} />
+          {data.features.map((feature, i) => (
+            <Card
+              type={feature.iconType}
+              icon={feature.icon}
+              title={feature.title}
+              subTitle={feature.subTitle}
+              key={i}
+            />
           ))}
         </div>
       </div>
