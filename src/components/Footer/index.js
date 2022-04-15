@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
+import { Container } from '../../elements/Container';
+
 export default function Footer({ footerLogo }) {
   const navigation = [
     {
@@ -49,7 +51,7 @@ export default function Footer({ footerLogo }) {
 
   return (
     <footer>
-      <div className="container">
+      <Container>
         <div className="item-footer">
           <div className="item-footer-description">
             <img src={footerLogo} alt="logo" className="App-logo" />
@@ -77,7 +79,7 @@ export default function Footer({ footerLogo }) {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

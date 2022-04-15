@@ -3,10 +3,12 @@ import React from 'react';
 import Card from '../../elements/Card';
 import data from '../../json/landingPage.json';
 
+import { Container } from '../../elements/Container';
+
 export default function Feature() {
   return (
     <section className="features">
-      <div className="container">
+      <Container>
         <div className="title">
           <h3>
             Lorem Ipsum is simply dummy text of the printing{' '}
@@ -27,7 +29,7 @@ export default function Feature() {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

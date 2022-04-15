@@ -1,4 +1,5 @@
-import Button from '../../elements/Button';
+import { Button } from '../../elements/Button';
+import { Container } from '../../elements/Container';
 
 const Hero = ({ heroPic }) => {
   const name = 'Rio Boy';
@@ -8,7 +9,7 @@ const Hero = ({ heroPic }) => {
   and scrambled it to make a type specimen book`;
 
   return (
-    <div className="container">
+    <Container>
       <div className="hero">
         <div className="profile">
           <h3>
@@ -16,13 +17,13 @@ const Hero = ({ heroPic }) => {
             My Name <span>{name}</span>
           </h3>
           <p>{lorem}</p>
-          <Button />
+          <Button primary>Show Me</Button>
         </div>
         <div className="picture">
           <img src={heroPic} className="App-profile-picture" alt="hero" />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

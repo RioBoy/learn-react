@@ -6,7 +6,6 @@
 @import url('./components/Feature/index.css');
 @import url('./components/Item/index.css');
 @import url('./components/Footer/index.css');
-@import url('./elements/Button/index.css');
 @import url('./elements//HamBurgerMenu/index.css');
 @import url('./elements//CloseHamMenu/index.css');
 @import url('./elements/Card/index.css');
@@ -18,18 +17,18 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
+/* .container {
   margin: 0 150px;
   display: grid;
 }
 
 .container-fluid {
   margin: 0;
-}
+} */
 
 /* Responsive */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container {
     margin: 0 20px;
   }
-}
+} */

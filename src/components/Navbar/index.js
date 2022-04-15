@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import HamburgerMenu from '../../elements/HamBurgerMenu';
 import CloseHamMenu from '../../elements/CloseHamMenu';
 
+import { Container, ContainerFluid } from '../../elements/Container';
+
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -44,8 +46,8 @@ export default class Navbar extends Component {
     const { close } = this.state;
 
     return (
-      <div className="container-fluid">
-        <div className="container">
+      <ContainerFluid>
+        <Container>
           <nav className={'nav ' + (!close ? 'close' : '')}>
             <a href="#" className="navbar-brand">
               <img src={this.props.logoNav} className="App-logo" alt="logo" />
@@ -101,9 +103,9 @@ export default class Navbar extends Component {
               })}
             </ul>
           </nav>
-        </div>
+        </Container>
         <hr className="border-bottom"></hr>
-      </div>
+      </ContainerFluid>
     );
   }
 }
