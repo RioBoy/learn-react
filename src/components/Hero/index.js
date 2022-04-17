@@ -1,28 +1,35 @@
+import data from '../../json/landingPage.json';
+
 import { Button } from '../../elements/Button';
 import { Container } from '../../elements/Container';
+import {
+  HeroStyled,
+  HeroProfile,
+  HeroHeading,
+  HeroParagraph,
+  HeroSpan,
+  HeroImageWrapper,
+  HeroImage,
+} from './styled';
 
 const Hero = ({ heroPic }) => {
-  const name = 'Rio Boy';
-  const lorem = `Lorem Ipsum is simply dummy text of the printing and typesetting
-  industry. Lorem Ipsum has been the industry's standard dummy text
-  ever since the 1500s, when an unknown printer took a galley of type
-  and scrambled it to make a type specimen book`;
-
   return (
     <Container>
-      <div className="hero">
-        <div className="profile">
-          <h3>
-            Hi there, Welcome <br />
-            My Name <span>{name}</span>
-          </h3>
-          <p>{lorem}</p>
+      <HeroStyled>
+        <HeroProfile>
+          <HeroHeading>
+            {data.hero.greeting}
+            <br />
+            {data.hero.prefix}
+            <HeroSpan> {data.hero.name}</HeroSpan>
+          </HeroHeading>
+          <HeroParagraph>{data.hero.description}</HeroParagraph>
           <Button primary>Show Me</Button>
-        </div>
-        <div className="picture">
-          <img src={heroPic} className="App-profile-picture" alt="hero" />
-        </div>
-      </div>
+        </HeroProfile>
+        <HeroImageWrapper>
+          <HeroImage src={heroPic} alt="hero" />
+        </HeroImageWrapper>
+      </HeroStyled>
     </Container>
   );
 };
