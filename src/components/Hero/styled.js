@@ -27,21 +27,6 @@ export const HeroSpan = styled.span`
   color: #398ab9;
 `;
 
-export const HeroProfile = styled.div`
-  & ${HeroHeading} {
-    margin-top: 0;
-    font-size: 42px;
-  }
-  & ${HeroParagraph} {
-    font-size: 18px;
-    color: #b0b0bb;
-    margin-top: -20px;
-  }
-  & ${HeroSpan} {
-    color: #398ab9;
-  }
-`;
-
 export const HeroImageWrapper = styled.div`
   @media screen and (max-width: 768px) {
     order: -1;

@@ -86,5 +86,51 @@
       "avatar": "/images/item-avatar-2.jpg",
       "userName": "Martin Tallo"
     }
-  ]
+  ],
+  "footer": {
+    "navigation": [
+      {
+        "header": "Community",
+        "link": [
+          {
+            "name": "Showcase"
+          },
+          {
+            "name": "Testimonials"
+          },
+          {
+            "name": "Webinar"
+          }
+        ]
+      },
+      {
+        "header": "Company",
+        "link": [
+          {
+            "name": "About"
+          },
+          {
+            "name": "Contact"
+          },
+          {
+            "name": "Career"
+          }
+        ]
+      },
+      {
+        "header": "Useful Links",
+        "link": [
+          {
+            "name": "Privacy & Policy"
+          },
+          {
+            "name": "Term & Conditions"
+          },
+          {
+            "name": "For Developer"
+          }
+        ]
+      }
+    ]
+  }
 }

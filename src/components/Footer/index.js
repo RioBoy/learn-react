@@ -1,85 +1,59 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
+import data from '../../json/landingPage.json';
+
 import { Container } from '../../elements/Container';
+import { AppLogo } from '../../elements/LogoImage';
+import {
+  FooterStyled,
+  ItemFooter,
+  ItemFooterDescription,
+  ItemFooterWidthFull,
+  NavigationFooter,
+  NavigationFooterHeading,
+  NavigationFooterUl,
+  NavigationFooterUlLi,
+  NavigationFooterUlLiAnchor,
+} from './styled';
 
 export default function Footer({ footerLogo }) {
-  const navigation = [
-    {
-      header: 'Community',
-      link: [
-        {
-          name: 'Showcase',
-        },
-        {
-          name: 'Testimonials',
-        },
-        {
-          name: 'Webinar',
-        },
-      ],
-    },
-    {
-      header: 'Company',
-      link: [
-        {
-          name: 'About',
-        },
-        {
-          name: 'Contact',
-        },
-        {
-          name: 'Career',
-        },
-      ],
-    },
-    {
-      header: 'Useful Links',
-      link: [
-        {
-          name: 'Privacy & Policy',
-        },
-        {
-          name: 'Term & Conditions',
-        },
-        {
-          name: 'For Developer',
-        },
-      ],
-    },
-  ];
+  const footerData = { data };
 
   return (
-    <footer>
+    <FooterStyled>
       <Container>
-        <div className="item-footer">
-          <div className="item-footer-description">
-            <img src={footerLogo} alt="logo" className="App-logo" />
+        <ItemFooter>
+          <ItemFooterDescription>
+            <AppLogo src={footerLogo} alt="logo" />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
             <p>copyright 2022 Lorem Ipsum</p>
-          </div>
-          <div className="item-footer-w-full"></div>
+          </ItemFooterDescription>
+          <ItemFooterWidthFull></ItemFooterWidthFull>
           <div className="item-footer-navigation">
-            <div className="navigation-footer">
-              {navigation.map((nav, i) => (
-                <div className="navigation-footer-item" key={i}>
-                  <p className="navigation-header">{nav.header}</p>
-                  <ul>
+            <NavigationFooter>
+              {footerData.data.footer.navigation.map((nav, i) => (
+                <div key={i}>
+                  <NavigationFooterHeading>
+                    {nav.header}
+                  </NavigationFooterHeading>
+                  <NavigationFooterUl>
                     {nav.link.map((link, j) => (
-                      <li key={j}>
-                        <a href="#">{link.name}</a>
-                      </li>
+                      <NavigationFooterUlLi key={j}>
+                        <NavigationFooterUlLiAnchor href="#">
+                          {link.name}
+                        </NavigationFooterUlLiAnchor>
+                      </NavigationFooterUlLi>
                     ))}
-                  </ul>
+                  </NavigationFooterUl>
                 </div>
               ))}
-            </div>
+            </NavigationFooter>
           </div>
-        </div>
+        </ItemFooter>
       </Container>
-    </footer>
+    </FooterStyled>
   );
 }

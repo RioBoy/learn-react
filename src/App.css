@@ -4,7 +4,6 @@
 @import url('./components/Navbar/index.css');
 @import url('./components/Feature/index.css');
 @import url('./components/Item/index.css');
-@import url('./components/Footer/index.css');
 @import url('./elements//HamBurgerMenu/index.css');
 @import url('./elements//CloseHamMenu/index.css');
 @import url('./elements/Card/index.css');
@@ -15,19 +14,3 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
-
-/* .container {
-  margin: 0 150px;
-  display: grid;
-}
-
-.container-fluid {
-  margin: 0;
-} */
-
-/* Responsive */
-/* @media screen and (max-width: 768px) {
-  .container {
-    margin: 0 20px;
-  }
-} */

@@ -14,11 +14,6 @@
   margin: 0;
 }
 
-.App-logo {
-  width: 60px;
-  height: 60px;
-}
-
 .nav-item {
   display: grid;
   grid-template-columns: repeat(5, 100px);

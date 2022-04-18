@@ -4,6 +4,7 @@ import HamburgerMenu from '../../elements/HamBurgerMenu';
 import CloseHamMenu from '../../elements/CloseHamMenu';
 
 import { Container, ContainerFluid } from '../../elements/Container';
+import { AppLogo } from '../../elements/LogoImage';
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ export default class Navbar extends Component {
         <Container>
           <nav className={'nav ' + (!close ? 'close' : '')}>
             <a href="#" className="navbar-brand">
-              <img src={this.props.logoNav} className="App-logo" alt="logo" />
+              <AppLogo src={this.props.logoNav} alt="logo" />
             </a>
 
             <HamburgerMenu onClick={this.toggleNav} />
@@ -59,11 +60,7 @@ export default class Navbar extends Component {
               <div className="mobile-nav">
                 <div className="mobile-fixed">
                   <a href="#" className="navbar-brand">
-                    <img
-                      src={this.props.logoNav}
-                      className="App-logo"
-                      alt="logo"
-                    />
+                    <AppLogo src={this.props.logoNav} alt="logo" />
                   </a>
 
                   <CloseHamMenu onClick={this.toggleNav} />

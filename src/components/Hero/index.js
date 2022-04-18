@@ -4,7 +4,6 @@ import { Button } from '../../elements/Button';
 import { Container } from '../../elements/Container';
 import {
   HeroStyled,
-  HeroProfile,
   HeroHeading,
   HeroParagraph,
   HeroSpan,
@@ -16,7 +15,7 @@ const Hero = ({ heroPic }) => {
   return (
     <Container>
       <HeroStyled>
-        <HeroProfile>
+        <div>
           <HeroHeading>
             {data.hero.greeting}
             <br />
@@ -25,7 +24,7 @@ const Hero = ({ heroPic }) => {
           </HeroHeading>
           <HeroParagraph>{data.hero.description}</HeroParagraph>
           <Button primary>Show Me</Button>
-        </HeroProfile>
+        </div>
         <HeroImageWrapper>
           <HeroImage src={heroPic} alt="hero" />
         </HeroImageWrapper>
