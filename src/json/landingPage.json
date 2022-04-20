@@ -1,4 +1,28 @@
 {
+  "navbar": {
+    "links": [
+      {
+        "name": "Home",
+        "to": "/"
+      },
+      {
+        "name": "About",
+        "to": "/about"
+      },
+      {
+        "name": "Contact",
+        "to": "/contact"
+      },
+      {
+        "name": "Sign In",
+        "to": "/login"
+      },
+      {
+        "name": "Sign Up",
+        "to": "/register"
+      }
+    ]
+  },
   "hero": {
     "name": "Rio Boy",
     "prefix": "My Name",

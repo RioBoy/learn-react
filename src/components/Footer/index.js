@@ -7,13 +7,13 @@ import { AppLogo } from '../../elements/LogoImage';
 import {
   FooterStyled,
   ItemFooter,
-  ItemFooterDescription,
-  ItemFooterWidthFull,
-  NavigationFooter,
-  NavigationFooterHeading,
-  NavigationFooterUl,
-  NavigationFooterUlLi,
-  NavigationFooterUlLiAnchor,
+  FooterDescription,
+  FooterWidthFull,
+  FooterNavigation,
+  FooterHeading,
+  FooterUnorderedList,
+  FooterListItem,
+  FooterListItemAnchor,
 } from './styled';
 
 export default function Footer({ footerLogo }) {
@@ -23,35 +23,31 @@ export default function Footer({ footerLogo }) {
     <FooterStyled>
       <Container>
         <ItemFooter>
-          <ItemFooterDescription>
+          <FooterDescription>
             <AppLogo src={footerLogo} alt="logo" />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
             <p>copyright 2022 Lorem Ipsum</p>
-          </ItemFooterDescription>
-          <ItemFooterWidthFull></ItemFooterWidthFull>
-          <div className="item-footer-navigation">
-            <NavigationFooter>
-              {footerData.data.footer.navigation.map((nav, i) => (
-                <div key={i}>
-                  <NavigationFooterHeading>
-                    {nav.header}
-                  </NavigationFooterHeading>
-                  <NavigationFooterUl>
-                    {nav.link.map((link, j) => (
-                      <NavigationFooterUlLi key={j}>
-                        <NavigationFooterUlLiAnchor href="#">
-                          {link.name}
-                        </NavigationFooterUlLiAnchor>
-                      </NavigationFooterUlLi>
-                    ))}
-                  </NavigationFooterUl>
-                </div>
-              ))}
-            </NavigationFooter>
-          </div>
+          </FooterDescription>
+          <FooterWidthFull></FooterWidthFull>
+          <FooterNavigation>
+            {footerData.data.footer.navigation.map((nav, i) => (
+              <div className="navigation-item" key={i}>
+                <FooterHeading>{nav.header}</FooterHeading>
+                <FooterUnorderedList>
+                  {nav.link.map((link, j) => (
+                    <FooterListItem key={j}>
+                      <FooterListItemAnchor href="#">
+                        {link.name}
+                      </FooterListItemAnchor>
+                    </FooterListItem>
+                  ))}
+                </FooterUnorderedList>
+              </div>
+            ))}
+          </FooterNavigation>
         </ItemFooter>
       </Container>
     </FooterStyled>

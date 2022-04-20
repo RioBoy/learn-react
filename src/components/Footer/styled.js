@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterStyled = styled.footer`
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 50px 0;
 `;
 
@@ -18,15 +18,15 @@ export const ItemFooter = styled.div`
   }
 `;
 
-export const ItemFooterDescription = styled.div`
+export const FooterDescription = styled.div`
   margin-bottom: 50px;
 `;
 
-export const ItemFooterWidthFull = styled.div`
+export const FooterWidthFull = styled.div`
   width: auto;
 `;
 
-export const NavigationFooter = styled.div`
+export const FooterNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -37,20 +37,20 @@ export const NavigationFooter = styled.div`
   }
 `;
 
-export const NavigationFooterHeading = styled.p`
+export const FooterHeading = styled.p`
   font-weight: 700;
 `;
 
-export const NavigationFooterUl = styled.ul`
+export const FooterUnorderedList = styled.ul`
   padding: 0;
 `;
 
-export const NavigationFooterUlLi = styled.li`
+export const FooterListItem = styled.li`
   padding-bottom: 10px;
   list-style: none;
 `;
 
-export const NavigationFooterUlLiAnchor = styled.a`
+export const FooterListItemAnchor = styled.a`
   color: #398ab9;
   text-decoration: none;
 `;

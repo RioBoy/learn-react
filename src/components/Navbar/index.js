@@ -1,10 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import HamburgerMenu from '../../elements/HamBurgerMenu';
 import CloseHamMenu from '../../elements/CloseHamMenu';
 
 import { Container, ContainerFluid } from '../../elements/Container';
 import { AppLogo } from '../../elements/LogoImage';
+
+import data from '../../json/landingPage.json';
+
+import {
+  ListItem,
+  ListItemAnchor,
+  MobileFixed,
+  MobileNav,
+  MobileUnorderedList,
+  NavBorderBottom,
+  UnorderedList,
+} from './styled';
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -21,28 +35,7 @@ export default class Navbar extends Component {
   };
 
   render() {
-    const links = [
-      {
-        name: 'Home',
-        to: '/',
-      },
-      {
-        name: 'About',
-        to: '/about',
-      },
-      {
-        name: 'Contact',
-        to: '/contact',
-      },
-      {
-        name: 'Sign In',
-        to: '/login',
-      },
-      {
-        name: 'Sign Up',
-        to: '/register',
-      },
-    ];
+    const navigation = { data };
 
     const { close } = this.state;
 
@@ -50,24 +43,24 @@ export default class Navbar extends Component {
       <ContainerFluid>
         <Container>
           <nav className={'nav ' + (!close ? 'close' : '')}>
-            <a href="#" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
               <AppLogo src={this.props.logoNav} alt="logo" />
-            </a>
+            </Link>
 
             <HamburgerMenu onClick={this.toggleNav} />
 
             <div className={close ? 'hidden' : 'show'}>
-              <div className="mobile-nav">
-                <div className="mobile-fixed">
-                  <a href="#" className="navbar-brand">
+              <MobileNav>
+                <MobileFixed>
+                  <Link to="/" className="navbar-brand">
                     <AppLogo src={this.props.logoNav} alt="logo" />
-                  </a>
+                  </Link>
 
                   <CloseHamMenu onClick={this.toggleNav} />
-                </div>
+                </MobileFixed>
 
-                <ul className="mobile-nav-item">
-                  {links.map((link, i) => {
+                <MobileUnorderedList>
+                  {navigation.data.navbar.links.map((link, i) => {
                     return link.name === 'Sign Up' ? (
                       <li className="mobile-nav-link" key={i}>
                         <a className="active" href={link.to}>
@@ -80,28 +73,28 @@ export default class Navbar extends Component {
                       </li>
                     );
                   })}
-                </ul>
-              </div>
+                </MobileUnorderedList>
+              </MobileNav>
             </div>
 
-            <ul className="nav-item">
-              {links.map((link, i) => {
+            <UnorderedList>
+              {navigation.data.navbar.links.map((link, i) => {
                 return link.name === 'Sign Up' ? (
-                  <li className="nav-link" key={i}>
-                    <a className="active" href={link.to}>
+                  <ListItem key={i}>
+                    <ListItemAnchor active href={link.to}>
                       {link.name}
-                    </a>
-                  </li>
+                    </ListItemAnchor>
+                  </ListItem>
                 ) : (
-                  <li className="nav-link" key={i}>
-                    <a href={link.to}>{link.name}</a>
-                  </li>
+                  <ListItem key={i}>
+                    <ListItemAnchor href={link.to}>{link.name}</ListItemAnchor>
+                  </ListItem>
                 );
               })}
-            </ul>
+            </UnorderedList>
           </nav>
         </Container>
-        <hr className="border-bottom"></hr>
+        <NavBorderBottom />
       </ContainerFluid>
     );
   }
