@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const NavBorderBottom = styled.hr`
   border-bottom: 0 solid #d1d1d1;
@@ -42,6 +43,28 @@ export const MobileUnorderedList = styled.ul`
   height: 100vh;
 `;
 
+export const MobileListItem = styled.li`
+  @media screen and (max-width: 1024px) {
+    margin: 10px 0;
+  }
+`;
+
+export const MobileStyledLink = styled(Link)`
+  background-color: ${(props) => (props.active ? '#398ab9' : 'inherit')};
+  color: ${(props) => (props.active ? '#fff' : '#398ab9')};
+  border-radius: ${(props) => (props.active ? '6px' : '0')};
+  font-weight: ${(props) => (props.active ? '700' : '400')};
+
+  &:hover {
+    background-color: ${(props) => (props.active ? '#21325e' : 'inherit')};
+  }
+
+  @media screen and (max-width: 1024px) {
+    text-decoration: none;
+    padding: ${(props) => (props.active ? '12px 30px' : '0')};
+  }
+`;
+
 export const UnorderedList = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, 100px);
@@ -59,7 +82,7 @@ export const ListItem = styled.li`
   justify-content: stretch;
 `;
 
-export const ListItemAnchor = styled.a`
+export const StyledLink = styled(Link)`
   text-decoration: none;
   line-height: 50px;
   padding: 0 15px;
@@ -76,7 +99,3 @@ export const ListItemAnchor = styled.a`
     border-radius: 6px;
   }
 `;
-
-ListItemAnchor.defaultProps = {
-  href: (props) => props.href,
-};

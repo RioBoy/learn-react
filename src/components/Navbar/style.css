@@ -1,0 +1,25 @@
+/* Style Navbar */
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.nav.close {
+  grid-template-columns: 1fr 28px 2fr;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .nav {
+    grid-template-columns: 1fr 28px !important;
+  }
+}

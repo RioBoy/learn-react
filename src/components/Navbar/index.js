@@ -9,14 +9,17 @@ import { Container, ContainerFluid } from '../../elements/Container';
 import { AppLogo } from '../../elements/LogoImage';
 
 import data from '../../json/landingPage.json';
+import './style.css';
 
 import {
   ListItem,
-  ListItemAnchor,
   MobileFixed,
+  MobileListItem,
+  MobileStyledLink,
   MobileNav,
   MobileUnorderedList,
   NavBorderBottom,
+  StyledLink,
   UnorderedList,
 } from './styled';
 
@@ -62,15 +65,17 @@ export default class Navbar extends Component {
                 <MobileUnorderedList>
                   {navigation.data.navbar.links.map((link, i) => {
                     return link.name === 'Sign Up' ? (
-                      <li className="mobile-nav-link" key={i}>
-                        <a className="active" href={link.to}>
+                      <MobileListItem key={i}>
+                        <MobileStyledLink active="true" to={link.to}>
                           {link.name}
-                        </a>
-                      </li>
+                        </MobileStyledLink>
+                      </MobileListItem>
                     ) : (
-                      <li className="mobile-nav-link" key={i}>
-                        <a href={link.to}>{link.name}</a>
-                      </li>
+                      <MobileListItem key={i}>
+                        <MobileStyledLink to={link.to}>
+                          {link.name}
+                        </MobileStyledLink>
+                      </MobileListItem>
                     );
                   })}
                 </MobileUnorderedList>
@@ -81,13 +86,13 @@ export default class Navbar extends Component {
               {navigation.data.navbar.links.map((link, i) => {
                 return link.name === 'Sign Up' ? (
                   <ListItem key={i}>
-                    <ListItemAnchor active href={link.to}>
+                    <StyledLink active="true" to={link.to}>
                       {link.name}
-                    </ListItemAnchor>
+                    </StyledLink>
                   </ListItem>
                 ) : (
                   <ListItem key={i}>
-                    <ListItemAnchor href={link.to}>{link.name}</ListItemAnchor>
+                    <StyledLink to={link.to}>{link.name}</StyledLink>
                   </ListItem>
                 );
               })}
