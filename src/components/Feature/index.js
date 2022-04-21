@@ -4,21 +4,28 @@ import Card from '../../elements/Card';
 import data from '../../json/landingPage.json';
 
 import { Container } from '../../elements/Container';
+import {
+  FeatureContent,
+  FeatureStyled,
+  FeatureTitle,
+  TitleHeading,
+  TitleSpan,
+} from './styled';
 
 export default function Feature() {
   return (
-    <section className="features">
+    <FeatureStyled>
       <Container>
-        <div className="title">
-          <h3>
+        <FeatureTitle>
+          <TitleHeading>
             Lorem Ipsum is simply dummy text of the printing{' '}
-            <span>
+            <TitleSpan>
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s
-            </span>
-          </h3>
-        </div>
-        <div className="features-content">
+            </TitleSpan>
+          </TitleHeading>
+        </FeatureTitle>
+        <FeatureContent>
           {data.features.map((feature, i) => (
             <Card
               type={feature.iconType}
@@ -28,8 +35,8 @@ export default function Feature() {
               key={i}
             />
           ))}
-        </div>
+        </FeatureContent>
       </Container>
-    </section>
+    </FeatureStyled>
   );
 }

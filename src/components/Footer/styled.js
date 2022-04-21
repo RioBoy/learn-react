@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const FooterStyled = styled.footer`
   margin-top: 50px;
@@ -50,7 +51,7 @@ export const FooterListItem = styled.li`
   list-style: none;
 `;
 
-export const FooterListItemAnchor = styled.a`
+export const FooterLink = styled(Link)`
   color: #398ab9;
   text-decoration: none;
 `;

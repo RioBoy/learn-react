@@ -1,37 +1,49 @@
 import React from 'react';
 
-import NumberFormat from 'react-number-format';
+import {
+  CardImage,
+  CardItem,
+  CardItemHeader,
+  CardPrice,
+  StyledNumberFormat,
+  FooterImage,
+  ItemContent,
+  MobileCardBody,
+  MobileCardFooter,
+  MobileCardHeading,
+  MobileCardParagraph,
+} from './styled';
 
 export default function ItemCard({ itemData }) {
   return (
-    <div className="item-content">
+    <ItemContent>
       {itemData.items.map((item) => (
-        <div className="card-item" key={item._id}>
-          <div className="card-item-header">
-            <div className="card-price">
-              <NumberFormat
+        <CardItem key={item._id}>
+          <CardItemHeader>
+            <CardPrice>
+              <StyledNumberFormat
                 value={item.price}
                 displayType={'text'}
                 thousandSeparator={true}
                 prefix={'IDR '}
               />
-            </div>
-            <img src={item.imageUrl} alt="item" />
-          </div>
-          <div className="card-mobile-view">
-            <div className="card-item-body">
-              <h3 className="item-title">{item.name}</h3>
-              <p>
+            </CardPrice>
+            <CardImage src={item.imageUrl} alt="item" />
+          </CardItemHeader>
+          <div className="card-mobile-wrapper">
+            <MobileCardBody>
+              <MobileCardHeading>{item.name}</MobileCardHeading>
+              <MobileCardParagraph>
                 {item.district}, {item.province}
-              </p>
-            </div>
-            <div className="card-item-footer">
-              <img src={item.avatar} alt="user" />
+              </MobileCardParagraph>
+            </MobileCardBody>
+            <MobileCardFooter>
+              <FooterImage src={item.avatar} alt="user" />
               <h5>{item.userName}</h5>
-            </div>
+            </MobileCardFooter>
           </div>
-        </div>
+        </CardItem>
       ))}
-    </div>
+    </ItemContent>
   );
 }

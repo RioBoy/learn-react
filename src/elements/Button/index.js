@@ -13,8 +13,8 @@ export const Button = styled.button`
   box-shadow: 0px 8px 15px rgba(57, 138, 158, 0.3);
 
   &:hover {
-    background-color: #1c658c;
-    color: #d1d1d1;
+    background-color: #21325e;
+    color: #fff;
     transition: all 0.5s;
   }
 `;

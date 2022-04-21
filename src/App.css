@@ -1,11 +1,6 @@
 /* Font Style */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@import url('./components/Feature/index.css');
-@import url('./components/Item/index.css');
-@import url('./elements/Card/index.css');
-@import url('./elements/ItemCard/index.css');
-
 body {
   margin: 0;
   padding: 0;

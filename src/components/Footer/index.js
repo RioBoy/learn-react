@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import data from '../../json/landingPage.json';
 
@@ -13,7 +14,7 @@ import {
   FooterHeading,
   FooterUnorderedList,
   FooterListItem,
-  FooterListItemAnchor,
+  FooterLink,
 } from './styled';
 
 export default function Footer({ footerLogo }) {
@@ -24,7 +25,9 @@ export default function Footer({ footerLogo }) {
       <Container>
         <ItemFooter>
           <FooterDescription>
-            <AppLogo src={footerLogo} alt="logo" />
+            <Link to="/">
+              <AppLogo src={footerLogo} alt="logo" />
+            </Link>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
@@ -39,9 +42,7 @@ export default function Footer({ footerLogo }) {
                 <FooterUnorderedList>
                   {nav.link.map((link, j) => (
                     <FooterListItem key={j}>
-                      <FooterListItemAnchor href="#">
-                        {link.name}
-                      </FooterListItemAnchor>
+                      <FooterLink to="/">{link.name}</FooterLink>
                     </FooterListItem>
                   ))}
                 </FooterUnorderedList>
