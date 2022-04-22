@@ -19,11 +19,10 @@ const Hero = ({ heroPic }) => {
           <HeroHeading>
             {data.hero.greeting}
             <br />
-            {data.hero.prefix}
-            <HeroSpan> {data.hero.name}</HeroSpan>
+            <HeroSpan>{data.hero.place}</HeroSpan>
           </HeroHeading>
           <HeroParagraph>{data.hero.description}</HeroParagraph>
-          <Button primary>Show Me</Button>
+          <Button primary>Explore</Button>
         </div>
         <HeroImageWrapper>
           <HeroImage src={heroPic} alt="hero" />

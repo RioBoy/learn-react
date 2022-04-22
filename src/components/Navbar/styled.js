@@ -71,6 +71,7 @@ export const UnorderedList = styled.ul`
   justify-content: end;
   gap: 15px;
   list-style: none;
+  margin: 10px 0;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -84,18 +85,20 @@ export const ListItem = styled.li`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  line-height: 50px;
-  padding: 0 15px;
+  padding: 12px 15px;
   text-align: center;
-  background-color: ${(props) => (props.active ? '#398ab9' : 'inherit')};
-  color: ${(props) => (props.active ? '#fff' : '#398ab9')};
+  background-color: ${(props) => (props.active ? '#fff' : 'inherit')};
+  color: ${(props) => (props.active ? '#398ab9' : '#398ab9')};
   border-radius: ${(props) => (props.active ? '6px' : '0')};
   font-weight: ${(props) => (props.active ? '700' : '400')};
+  border: ${(props) => (props.active ? '2px solid #398ab9' : '2px solid #fff')};
 
   &:hover {
-    background-color: ${(props) => (props.active ? '#21325e' : 'lightblue')};
+    background-color: ${(props) => (props.active ? '#398ab9' : 'lightblue')};
     color: white;
     transition: all 0.5s;
     border-radius: 6px;
+    border: ${(props) =>
+      props.active ? '2px solid #398ab9' : '2px solid lightblue'};
   }
 `;
