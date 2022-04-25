@@ -1,6 +1,22 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const NavbarBrand = styled(Link)`
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+
+  @media screen and (max-width: 1024px) {
+    padding: 5px 0;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 426px) {
+    max-width: 100px;
+  }
+`;
+
 export const NavBorderBottom = styled.hr`
   border-bottom: 0 solid #d1d1d1;
   margin: 0;
@@ -50,13 +66,15 @@ export const MobileListItem = styled.li`
 `;
 
 export const MobileStyledLink = styled(Link)`
-  background-color: ${(props) => (props.active ? '#398ab9' : 'inherit')};
-  color: ${(props) => (props.active ? '#fff' : '#398ab9')};
+  background-color: ${(props) => (props.active ? '#fff' : 'inherit')};
+  color: ${(props) => (props.active ? '#398ab9' : '#398ab9')};
   border-radius: ${(props) => (props.active ? '6px' : '0')};
   font-weight: ${(props) => (props.active ? '700' : '400')};
+  border: ${(props) => (props.active ? '2px solid #398ab9' : '2px solid #fff')};
 
   &:hover {
-    background-color: ${(props) => (props.active ? '#21325e' : 'inherit')};
+    background-color: ${(props) => (props.active ? '#398ab9' : 'inherit')};
+    color: ${(props) => (props.active ? '#fff' : '#398ab9')};
   }
 
   @media screen and (max-width: 1024px) {

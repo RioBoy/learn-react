@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import HamburgerMenu from '../../elements/HamBurgerMenu';
 import CloseHamMenu from '../../elements/CloseHamMenu';
 
 import { Container, ContainerFluid } from '../../elements/Container';
-import { AppLogo } from '../../elements/LogoImage';
+import { AppLogo, LogoName } from '../../elements/LogoImage';
 
 import data from '../../json/landingPage.json';
 import './style.css';
 
 import {
+  NavbarBrand,
   ListItem,
   MobileFixed,
   MobileListItem,
@@ -46,18 +46,20 @@ export default class Navbar extends Component {
       <ContainerFluid>
         <Container>
           <nav className={'nav ' + (!close ? 'close' : '')}>
-            <Link to="/" className="navbar-brand">
+            <NavbarBrand to="/">
               <AppLogo src={this.props.logoNav} alt="logo" />
-            </Link>
+              <LogoName>NusaCation</LogoName>
+            </NavbarBrand>
 
             <HamburgerMenu onClick={this.toggleNav} />
 
             <div className={close ? 'hidden' : 'show'}>
               <MobileNav>
                 <MobileFixed>
-                  <Link to="/" className="navbar-brand">
+                  <NavbarBrand to="/">
                     <AppLogo src={this.props.logoNav} alt="logo" />
-                  </Link>
+                    <LogoName>NusaCation</LogoName>
+                  </NavbarBrand>
 
                   <CloseHamMenu onClick={this.toggleNav} />
                 </MobileFixed>

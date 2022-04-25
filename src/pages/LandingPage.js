@@ -1,7 +1,7 @@
 import React from 'react';
 
-import logo from '../logo.svg';
-import pic from '../assets/images/pic.jpg';
+import logo from '../logo.png';
+import pic from '../assets/images/hero.jpg';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Feature from '../components/Feature';

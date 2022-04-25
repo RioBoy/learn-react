@@ -12,6 +12,10 @@ export const HeroStyled = styled.div`
     height: auto;
     grid-template-columns: repeat(1, 1fr);
   }
+
+  @media screen and (min-width: 320px) and (max-width: 426px) {
+    gap: 20px;
+  }
 `;
 
 export const HeroHeading = styled.h3`
